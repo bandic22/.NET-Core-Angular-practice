@@ -12,6 +12,7 @@ namespace DotNetAngularPractice.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         public DbSet<Value> Values { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -20,6 +21,11 @@ namespace DotNetAngularPractice.Data
                 {
                     Id = 1,
                     Name = "Value 101"
+                },
+                new Value
+                {
+                    Id = 2,
+                    Name = "Value 102"
                 }
             );
         }
